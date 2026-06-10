@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,65 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <main className="min-h-screen w-full bg-slate-100">
+  {/* Navbar */}
+  <header className="flex h-16 w-full items-center justify-between bg-slate-900 px-3 text-white shadow-md">
+    <h1 className="text-xl font-bold">
+      Sofwares de Comunicação Alternativa 
+    </h1>
+
+    <div className="rounded-md bg-neutral-800 px-4 py-2 text-sm font-semibold text-green-500">
+      Admin
+    </div>
+  </header>
+
+  {/* Sidebar e Conteúdo principal */}
+  <div className="grid min-h-[calc(100vh-4rem)] w-full grid-cols-[16rem_1fr]">
+    {/* Sidebar */}
+    <aside className="h-full bg-white shadow-lg shadow-gray-500">
+      <div className="flex h-full flex-col p-4">
+        <h2 className="mb-4 text-sm font-bold text-slate-500">
+          estudantes
+        </h2>
+
+        <nav className="flex flex-col gap-2 text-black">
+
+          <Link href="">
+            Wesley Gabriel Pereira da Silva Santos
+          </Link>
+
+        </nav>
+
+                <nav className="flex flex-col gap-2 text-black">
+
+          <Link href="">
+            João Gabriel Alves Barbosa
+          </Link>
+
+        </nav>
+      </div>
+    </aside>
+
+    {/* Conteúdo principal */}
+    <section className="min-h-full w-full">
+      <div className="w-full p-4">
+        <div className="mb-6">
+          <h2 className="text-sm font-bold text-slate-800">
+            slaa
+          </h2>
+
+          <p className="mt-2 mb-2 text-slate-600">
+            .
+          </p>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+        
+      </body>
     </html>
   );
 }

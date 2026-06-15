@@ -33,7 +33,7 @@ export default function RootLayout({
   {/* Navbar */}
   <header className="flex h-16 w-full items-center justify-between bg-slate-900 px-3 text-white shadow-md">
     <h1 className="text-xl font-bold">
-      Sofwares de Comunicação Alternativa 
+      Sofwares de Comunicação Alternativ
     </h1>
 
     <div className="rounded-md bg-neutral-800 px-4 py-2 text-sm font-semibold text-green-500">
